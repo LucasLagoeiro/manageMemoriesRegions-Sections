@@ -1,0 +1,3 @@
+C:/Users/lagoeirl/OneDrive - STMicroelectronics/Desktop/githubArticles/separeRegionsAndSections/separeRegionsAndSections_VSCode/build/debug/CMakeFiles/separeRegionsAndSections_VSCode.dir
+C:/Users/lagoeirl/OneDrive - STMicroelectronics/Desktop/githubArticles/separeRegionsAndSections/separeRegionsAndSections_VSCode/build/debug/CMakeFiles/edit_cache.dir
+C:/Users/lagoeirl/OneDrive - STMicroelectronics/Desktop/githubArticles/separeRegionsAndSections/separeRegionsAndSections_VSCode/build/debug/CMakeFiles/rebuild_cache.dir

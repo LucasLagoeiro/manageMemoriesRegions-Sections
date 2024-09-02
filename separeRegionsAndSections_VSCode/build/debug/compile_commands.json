@@ -1,0 +1,26 @@
+[
+{
+  "directory": "C:/Users/lagoeirl/OneDrive - STMicroelectronics/Desktop/githubArticles/separeRegionsAndSections/separeRegionsAndSections_VSCode/build/debug",
+  "command": "C:\\ST\\STM32CubeCLT_1.16.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DDEBUG -I\"C:/Users/lagoeirl/OneDrive - STMicroelectronics/Desktop/githubArticles/separeRegionsAndSections/separeRegionsAndSections_VSCode/Inc\" -fdata-sections -ffunction-sections -Wl,--gc-sections -g -std=gnu11 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -Wno-unused-parameter -Og -g3 -ggdb -o CMakeFiles\\separeRegionsAndSections_VSCode.dir\\Src\\main.c.obj -c \"C:\\Users\\lagoeirl\\OneDrive - STMicroelectronics\\Desktop\\githubArticles\\separeRegionsAndSections\\separeRegionsAndSections_VSCode\\Src\\main.c\"",
+  "file": "C:\\Users\\lagoeirl\\OneDrive - STMicroelectronics\\Desktop\\githubArticles\\separeRegionsAndSections\\separeRegionsAndSections_VSCode\\Src\\main.c",
+  "output": "CMakeFiles\\separeRegionsAndSections_VSCode.dir\\Src\\main.c.obj"
+},
+{
+  "directory": "C:/Users/lagoeirl/OneDrive - STMicroelectronics/Desktop/githubArticles/separeRegionsAndSections/separeRegionsAndSections_VSCode/build/debug",
+  "command": "C:\\ST\\STM32CubeCLT_1.16.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DDEBUG -I\"C:/Users/lagoeirl/OneDrive - STMicroelectronics/Desktop/githubArticles/separeRegionsAndSections/separeRegionsAndSections_VSCode/Inc\" -fdata-sections -ffunction-sections -Wl,--gc-sections -g -std=gnu11 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -Wno-unused-parameter -Og -g3 -ggdb -o CMakeFiles\\separeRegionsAndSections_VSCode.dir\\Src\\syscall.c.obj -c \"C:\\Users\\lagoeirl\\OneDrive - STMicroelectronics\\Desktop\\githubArticles\\separeRegionsAndSections\\separeRegionsAndSections_VSCode\\Src\\syscall.c\"",
+  "file": "C:\\Users\\lagoeirl\\OneDrive - STMicroelectronics\\Desktop\\githubArticles\\separeRegionsAndSections\\separeRegionsAndSections_VSCode\\Src\\syscall.c",
+  "output": "CMakeFiles\\separeRegionsAndSections_VSCode.dir\\Src\\syscall.c.obj"
+},
+{
+  "directory": "C:/Users/lagoeirl/OneDrive - STMicroelectronics/Desktop/githubArticles/separeRegionsAndSections/separeRegionsAndSections_VSCode/build/debug",
+  "command": "C:\\ST\\STM32CubeCLT_1.16.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DDEBUG -I\"C:/Users/lagoeirl/OneDrive - STMicroelectronics/Desktop/githubArticles/separeRegionsAndSections/separeRegionsAndSections_VSCode/Inc\" -fdata-sections -ffunction-sections -Wl,--gc-sections -g -std=gnu11 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -Wno-unused-parameter -Og -g3 -ggdb -o CMakeFiles\\separeRegionsAndSections_VSCode.dir\\Src\\sysmem.c.obj -c \"C:\\Users\\lagoeirl\\OneDrive - STMicroelectronics\\Desktop\\githubArticles\\separeRegionsAndSections\\separeRegionsAndSections_VSCode\\Src\\sysmem.c\"",
+  "file": "C:\\Users\\lagoeirl\\OneDrive - STMicroelectronics\\Desktop\\githubArticles\\separeRegionsAndSections\\separeRegionsAndSections_VSCode\\Src\\sysmem.c",
+  "output": "CMakeFiles\\separeRegionsAndSections_VSCode.dir\\Src\\sysmem.c.obj"
+},
+{
+  "directory": "C:/Users/lagoeirl/OneDrive - STMicroelectronics/Desktop/githubArticles/separeRegionsAndSections/separeRegionsAndSections_VSCode/build/debug",
+  "command": "C:\\ST\\STM32CubeCLT_1.16.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DDEBUG -I\"C:/Users/lagoeirl/OneDrive - STMicroelectronics/Desktop/githubArticles/separeRegionsAndSections/separeRegionsAndSections_VSCode\" -g -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -Wno-unused-parameter -x assembler-with-cpp -MMD -MP -Og -g3 -ggdb -o CMakeFiles\\separeRegionsAndSections_VSCode.dir\\Startup\\startup_stm32l452retx.s.obj -c \"C:\\Users\\lagoeirl\\OneDrive - STMicroelectronics\\Desktop\\githubArticles\\separeRegionsAndSections\\separeRegionsAndSections_VSCode\\Startup\\startup_stm32l452retx.s\"",
+  "file": "C:\\Users\\lagoeirl\\OneDrive - STMicroelectronics\\Desktop\\githubArticles\\separeRegionsAndSections\\separeRegionsAndSections_VSCode\\Startup\\startup_stm32l452retx.s",
+  "output": "CMakeFiles\\separeRegionsAndSections_VSCode.dir\\Startup\\startup_stm32l452retx.s.obj"
+}
+]
