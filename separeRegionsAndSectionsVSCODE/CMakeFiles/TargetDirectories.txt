@@ -1,0 +1,5 @@
+C:/Users/lagoeirl/Downloads/separeRegionsAndSectionsVSCODE/CMakeFiles/separeRegionsAndSectionsVSCODE.dir
+C:/Users/lagoeirl/Downloads/separeRegionsAndSectionsVSCODE/CMakeFiles/edit_cache.dir
+C:/Users/lagoeirl/Downloads/separeRegionsAndSectionsVSCODE/CMakeFiles/rebuild_cache.dir
+C:/Users/lagoeirl/Downloads/separeRegionsAndSectionsVSCODE/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+C:/Users/lagoeirl/Downloads/separeRegionsAndSectionsVSCODE/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir

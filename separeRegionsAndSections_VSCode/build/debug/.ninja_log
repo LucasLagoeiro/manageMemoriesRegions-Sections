@@ -1,6 +1,0 @@
-# ninja log v5
-7	363	7469743482747835	CMakeFiles/separeRegionsAndSections_VSCode.dir/Src/main.c.obj	fbb1583c3c25f98
-49	386	7469743483029757	CMakeFiles/separeRegionsAndSections_VSCode.dir/Startup/startup_stm32l452retx.s.obj	1f0083dc6f5124e8
-33	490	7469743484131481	CMakeFiles/separeRegionsAndSections_VSCode.dir/Src/sysmem.c.obj	989ee2304253b871
-19	564	7469743484881467	CMakeFiles/separeRegionsAndSections_VSCode.dir/Src/syscall.c.obj	49a1857e793b19dc
-566	1477	7469743490694826	separeRegionsAndSections_VSCode.elf	76088c45cc3bb2f0
