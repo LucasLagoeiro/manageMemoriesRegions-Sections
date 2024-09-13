@@ -46,9 +46,8 @@ UART_HandleTypeDef huart2;
 unsigned char __attribute__((section(".myBufSectionRAM"))) buf_ram[128];
 unsigned char __attribute__((section(".myBufSectionFLASH"))) buf_flash[10] = {0,1,2,3,4,5,6,7,8,9};
 unsigned char __attribute__((section(".mysection"))) buf_my_memory[10] = {0,1,2,3,4,5,6,7,8,9};
+static uint8_t __attribute__((section(".myBackUpRAM"))) u8_variable;
 
-static uint8_t __attribute__((section(".myBackUpRAM"))) u8_variable[10];
-static uint16_t __attribute__((section(".myBackUpRAM"))) u16_variable = 0x00;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -106,30 +105,17 @@ int main(void)
   // Enable the RTC clock
   __HAL_RCC_RTC_ENABLE();
 
-  //Mechanism to manage and validate the data stored in the backup RAM.
-  if((u8_variable[0] % 0x10) != 0){
-	  u8_variable[0] = 0x00;
-	  u16_variable = 0x00;
-  }
-  else{
-	  u16_variable += 1;
-  }
+  //Mechanism to clean and validate the data stored in the backup RAM.
+  if((u8_variable % 0x10) != 0) u8_variable = 0x00;
 
+  u8_variable += 0x10;
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  if (u16_variable == 0x00){
-	  printf("I will add 0x10 in u8_variable and reset\r\n");
-	  u8_variable[0] = 0x10;
-	  // Simulate a system reset
-	  NVIC_SystemReset();
-  }
-  else
-	  printf("Variable in BackUpRAM: %d\r\n ", u8_variable[0]);
-
+  printf("Variable in BackUpRAM: %d\r\n ", u8_variable);
   /* USER CODE END 2 */
 
   /* Infinite loop */

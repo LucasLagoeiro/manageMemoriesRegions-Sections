@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -31,7 +32,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+//#define BACKUP_RAM
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -46,11 +47,7 @@ UART_HandleTypeDef huart2;
 unsigned char __attribute__((section(".myBufSectionRAM"))) buf_ram[128];
 unsigned char __attribute__((section(".myBufSectionFLASH"))) buf_flash[10] = {0,1,2,3,4,5,6,7,8,9};
 unsigned char __attribute__((section(".mysection"))) buf_my_memory[10] = {0,1,2,3,4,5,6,7,8,9};
-
-static uint8_t __attribute__((section(".myBackUpRAM"))) u8_variable[10];
-static uint16_t __attribute__((section(".myBackUpRAM"))) u16_variable = 0x00;
-
-
+static uint8_t __attribute__((section(".myBackUpRAM"))) u8_variable;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -84,7 +81,6 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -98,10 +94,10 @@ int main(void)
   uint32_t tickstart = HAL_GetTick();
   while((PWR->CR1 & PWR_CR1_DBP) == 0U)
   {
-      if((HAL_GetTick() - tickstart) > RCC_DBP_TIMEOUT_VALUE)
-      {
-          Error_Handler();
-      }
+	  if((HAL_GetTick() - tickstart) > RCC_DBP_TIMEOUT_VALUE)
+	  {
+		  Error_Handler();
+	  }
   }
 
   // Select the RTC clock source (LSE, LSI, or HSE)
@@ -109,14 +105,10 @@ int main(void)
   // Enable the RTC clock
   __HAL_RCC_RTC_ENABLE();
 
-  //Mechanism to manage and validate the data stored in the backup RAM.
-  if((u8_variable[0] % 0x10) != 0){
-	  u8_variable[0] = 0x00;
-	  u16_variable = 0x00;
-  }
-  else{
-	  u16_variable += 1;
-  }
+  //Mechanism to clean and validate the data stored in the backup RAM.
+  if((u8_variable % 0x10) != 0) u8_variable = 0x00;
+
+  u8_variable += 0x10;
 
   /* USER CODE END SysInit */
 
@@ -124,20 +116,14 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  if (u16_variable == 0x00){
-	  printf("I will add 0x10 in u8_variable and reset\r\n");
-	  u8_variable[0] = 0x10;
-	  // Simulate a system reset
-	  NVIC_SystemReset();
-  }
-  else
-	  printf("Variable in BackUpRAM: %d\r\n ", u8_variable[0]);
+  printf("Variable in BackUpRAM: %d\r\n ", u8_variable);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
 
     /* USER CODE END WHILE */
 
